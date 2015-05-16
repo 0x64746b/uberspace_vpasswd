@@ -64,6 +64,7 @@ class PasswordChangeForm(Form):
 @app.route('/passwort_aendern', methods=['GET', 'POST'])
 def change_password():
     form = PasswordChangeForm(request.form)
+    domain = app.config['DOMAIN']
 
     if request.method == 'POST' and form.validate():
         email, current_password = form.email.data, form.current_password.data
@@ -84,7 +85,7 @@ def change_password():
                 flash('Passwort wurde erfolgreich geändert!', 'success')
                 return redirect(url_for('change_password'))
 
-    return render_template('index.html', form=form)
+    return render_template('index.html', form=form, domain=domain)
 
 
 def _credentials_are_valid(email, password):
