@@ -63,6 +63,9 @@
                       'class': 'form-control',
                       'aria-describedby': 'emailErrors',
                       'placeholder': 'vorname.nachname@' + domain,
+                      'required': 'required',
+                      'pattern': '.+@' + domain,
+                      'title': 'the email address has to end on \'%s\''|format(domain),
                     }
                   )
                 }}
@@ -89,6 +92,7 @@
                       'class': 'form-control',
                       'aria-describedby': 'currentErrors',
                       'placeholder': 'Passwort',
+                      'required': 'required',
                     }
                   )
                 }}
@@ -119,6 +123,10 @@
                       'class': 'form-control',
                       'aria-describedby': 'newErrors',
                       'placeholder': 'Passwort',
+                      'required': 'required',
+                      'pattern': '.{16,}',
+                      'title': 'your new password has to be at least 16'
+                               ' characters long'
                     }
                   )
                 }}
@@ -145,6 +153,10 @@
                       'class': 'form-control',
                       'aria-describedby': 'confirmedErrors',
                       'placeholder': 'Passwort',
+                      'required': 'required',
+                      'pattern': '.{16,}',
+                      'title': 'your new password has to be at least 16'
+                               ' characters long'
                     }
                   )
                 }}
