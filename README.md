@@ -30,6 +30,7 @@ Deployment
     1. Configure the domain of the email accounts
     2. Configure the IMAP server
     3. Generate 2 strong secrets to derive session keys and CSRF nonces from
+    4. Configure the log file and log level
 
  3. Create a `fcgi` file
 

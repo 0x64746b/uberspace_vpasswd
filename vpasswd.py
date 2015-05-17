@@ -21,6 +21,12 @@ app = Flask(__name__)
 app.config.from_object('config')
 
 
+logging.basicConfig(
+    filename=app.config['LOG_FILE'],
+    level=app.config['LOG_LEVEL']
+)
+
+
 class PasswordChangeForm(Form):
 
     def correct_domain(form, field):
