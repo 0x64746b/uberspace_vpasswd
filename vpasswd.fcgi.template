@@ -1,0 +1,10 @@
+#!/home/<USER>/.virtualenvs/uberspace-vpasswd/bin/python
+ 
+import sys
+sys.path.insert(0, "/var/www/virtual/<USER>/uberspace_vpasswd/")
+ 
+from flup.server.fcgi import WSGIServer
+from vpasswd import app
+ 
+if __name__ == '__main__':
+    WSGIServer(app).run()
