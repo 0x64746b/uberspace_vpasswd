@@ -61,7 +61,7 @@ class PasswordChangeForm(Form):
     confirmed_password = PasswordField('Wiederholung')
 
 
-@app.route('/passwort_aendern', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def change_password():
     form = PasswordChangeForm(request.form)
     domain = app.config['DOMAIN']
