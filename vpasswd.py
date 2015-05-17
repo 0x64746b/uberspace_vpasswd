@@ -107,9 +107,11 @@ def _credentials_are_valid(email, password):
 
 
 def _set_new_password(user, password):
-    command = 'vpasswd {}'.format(user)
-
-    vpasswd = pexpect.spawn(command)
+    vpasswd = pexpect.spawn(
+        command='vpasswd',
+        args=[user],
+        env={'HOME': app.config['HOME']}
+    )
 
     vpasswd.expect('password:')
     vpasswd.sendline(password)
