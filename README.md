@@ -43,3 +43,11 @@ Deployment
 
         1. Configure the path to your `python` binary
         2. Configure the path to the project checkout
+
+The web form is now reachable under [http://&lt;YOUR DOMAIN&gt;/fcgi-bin/vpasswd.fcgi/]().
+Mind the trailing `/`, which is the path passed to the web app.
+
+See the [Uberspace documentation](https://wiki.uberspace.de/cool:flask#url_aufhuebschen)
+for how to beautify that URL. Just remember to put the redirect rule before any
+generic catch alls that might already exist ;)
+
