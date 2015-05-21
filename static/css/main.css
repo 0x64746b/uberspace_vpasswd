@@ -1,6 +1,4 @@
 body {
-  padding-top: 50px;
-}
-.main-content {
-  padding: 40px 15px;
+  /* Compensate for navbar-fixed-top */
+  padding: 70px 15px;
 }
